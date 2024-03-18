@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 1</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    h2{
+        opacity: 45%;
+    }
+    .container {
+        border-color:#007bff;
+        /* background-color: #007bff; */
+        background-clip: padding-box;
+        box-shadow: inset 0 0 0 30px #007bff;
+        max-width: 83%;
+        margin: 0 auto;
+        padding: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        display: inline-block;
+        width: 32%; /* Adjust the width to fit three elements in a row */
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        width: calc(100% - 10px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        /* margin-left: 10px;
+        margin-right: 10px;  */
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #formData {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Registration</h1>
+    <h2>Personal Details</h2>
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="text" id="dob" name="dob" required placeholder="Enter birth date">
+    </div> 
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+    </div>
+
+    <div class="form-group">
+        <label for="mobile">Mobile number</label>
+        <input type="text" id="mobile" name="mobile" required placeholder="Enter mobile number">
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="text" id="gender" name="gender" required placeholder="Enter your gender">
+    </div>
+    <div class="form-group">
+        <label for="occupation">Occupation</label>
+        <input type="text" id="occupation" name="occupation" required placeholder="Enter occupation">
+    </div>
+
+    <h2>Identity Details</h2>
+    <div class="form-group">
+        <label for="id_type">ID Type</label>
+        <input type="text" id="id_type" name="id_type" required placeholder="Enter ID type">
+    </div>
+    <div class="form-group">
+        <label for="id_number">ID Number</label>
+        <input type="text" id="id_number" name="id_number" required placeholder="Enter ID number">
+    </div> 
+    <div class="form-group">
+        <label for="issue_authority">Issue Authority</label>
+        <input type="text" id="issue_authority" name="issue_authority" required placeholder="Enter ID issue authority">
+    </div>
+    
+    <div class="form-group">
+        <label for="issue_date">Issue Date</label>
+        <input type="text" id="issue_date" name="issue_date" required placeholder="Enter ID issue date">
+    </div>
+    <div class="form-group">
+        <label for="issue_state">Issue State</label>
+        <input type="text" id="issue_state" name="issue_state" required placeholder="Enter ID issue state">
+    </div>
+    <div class="form-group">
+        <label for="expiryDate">Expiry Date</label>
+        <input type="text" id="expiryDate" name="expiryDate" required placeholder="Enter ID expiry date">
+    </div>
+
+    <button onclick="printFormData()">Next</button>
+    <div id="formData"></div>
+</div>
+<script>
+    function printFormData() {
+        var name = document.getElementById('name').value;
+        var dob = document.getElementById('dob').value;
+        var email = document.getElementById('email').value;
+        var mobile = document.getElementById('mobile').value;
+        var gender = document.getElementById('gender').value;
+        var occupation = document.getElementById('occupation').value;
+        var id_type = document.getElementById('id_type').value;
+        var id_number = document.getElementById('id_number').value;
+        var issue_authority = document.getElementById('issue_authority').value;
+        var issue_date = document.getElementById('issue_date').value;
+        var issue_state = document.getElementById('issue_state').value;
+        var expiryDate = document.getElementById('expiryDate').value;
+        var formDataDiv = document.getElementById('formData');
+        formDataDiv.innerHTML = "<h3>Form Data:</h3><p><strong>Name:</strong> " + name + 
+            "</p><p><strong>Date of Birth:</strong> " + dob + 
+            "</p><p><strong>Email:</strong> " + email + 
+            "</p><p><strong>Mobile number:</strong> " + mobile + 
+            "</p><p><strong>Gender:</strong> " + gender + 
+            "</p><p><strong>Occupation:</strong> " + occupation + 
+            "</p><p><strong>ID Type:</strong> " + id_type + 
+            "</p><p><strong>ID Number:</strong> " + id_number + 
+            "</p><p><strong>Issue authority:</strong> " + issue_authority + 
+            "</p><p><strong>Issue Date:</strong> " + issue_date + 
+            "</p><p><strong>Issue state:</strong> " + issue_state + 
+            "</p><p><strong>Expiry date:</strong> " + expiryDate + 
+            "</p>";
+    }
+</script>
+
+</body>
+</html>
